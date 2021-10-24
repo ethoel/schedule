@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "Schedule"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/schedule"
+license = "BSD license"
+author = 'ETH'
+author_email = "eth@example.com"
+
+[tool.briefcase.app.schedule]
+formal_name = "Schedule"
+description = "Schedule"
+icon = "src/schedule/resources/schedule"
+sources = ['src/schedule']
+requires = []
+
+
+[tool.briefcase.app.schedule.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.schedule.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.schedule.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.schedule.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.schedule.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]

@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Also ignore this stuff 
+beeware-venv/
+schedule/android/
+schedule/linux/
+schedule/src/schedule/*.db
+
